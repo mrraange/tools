@@ -16,9 +16,7 @@ rm -rf $HOME/.okp4d/data</code>
 
 <li>download snapshot, restart the service and check the log
 <code>
-cd $HOME/.okp4d
-wget https://rangenodes.com/snapshots/snapshot_okp4.tar.gz
-tar -xvf snapshot_okp4.tar.gz
+curl -L https://rangenodes.com/snapshots/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.okp4d
 mv $HOME/.okp4d/priv_validator_state.json.backup $HOME/.okp4d/data/priv_validator_state.json
-sudo systemctl restart okp4d && journalctl -u okp4d -f --no-hostname -o cat
+sudo systemctl restart okp4d && sudo journalctl -u okp4d -f --no-hostname -o cat
 </code>
