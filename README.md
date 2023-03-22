@@ -14,7 +14,7 @@ sudo systemctl stop okp4d
 cp $HOME/.okp4d/data/priv_validator_state.json $HOME/.okp4d/priv_validator_state.json.backup
 rm -rf $HOME/.okp4d/data</code>
 
-<li>download snapshot, restart the service and check the log
+<li>download snapshot, restart the service and check log
 <code>
 curl -L https://rangenodes.com/snapshots/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.okp4d
 mv $HOME/.okp4d/priv_validator_state.json.backup $HOME/.okp4d/data/priv_validator_state.json
