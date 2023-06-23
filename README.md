@@ -1,4 +1,4 @@
-# OKP4 snapshot  (block  1663227)
+# OKP4 snap  (block  1663227)
 
 Automatic installation script
 
